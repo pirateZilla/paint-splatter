@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> my PaintAPP</title>
+  <style type="text/css">
+    canvas{
+      border:1px solid black;
+    }
+  </style>
+  
+
+</head>
+
+<body>
+
+<canvas id="a" width="800" height="500"></canvas>
+
+<div>
+  <button id="button_clear" onclick="clearCanvas()" > Clear !</button>
+</div>
+<div>
+ <button onclick="window.location.reload()">reset </button> 
+</div>
+   <select  id="dcol" name="Colour">
+              <option value="black" selected="selected">Black</option>
+              <option value="red">Red</option>
+              <option value="green"> Green</option>
+              <option value="blue">Blue</option>
+              <option value="white">** ERASER **</option>
+            </select>
+</div>
+<div>
+  <button id="drawing" onclick="drawRectangle()"> save art </button>
+</div>
+<script type="text/javascript">
+  //canvas variables 
+  var md = false;
+  var size = prompt('enter your brush size')
+  var canvas = document.getElementById('a');
+  canvas.addEventListener('mousedown', down);
+  canvas.addEventListener('mouseup', toggledraw);
+  canvas.addEventListener('mousemove', 
+  function(evt){
+    var mousePos = getMousePos(canvas, evt);
+    var posx = mousePos.x;
+    var posy = mousePos.y;
+    draw(canvas, posx, posy);
+
+  });
+
+
+  function down(){
+    md = true;
+  }
+  function toggledraw(){
+
+    md = false;
+    canvas.style.cursor="crosshair"; //changes the pointer 
+    
+  }
+  function getMousePos(canvas, evt){
+    var rect = canvas.getBoundingClientRect();
+    return{
+      x:evt.clientX - rect.left,
+      y:evt.clientY - rect.top
+    };
+  }
+  function draw(canvas, posx, posy){
+    var context = canvas.getContext('2d');
+    if(md){
+
+      canvas.style.cursor="crosshair"; //changes the pointer 
+      context.fillRect(posx, posy, size, size)
+      //takes values from drop down to change the colour
+      context.fillStyle=dcol.value;
+    }
+  }
+
+
+  //the clear button 
+  function clearCanvas(){
+
+  var c = document.getElementById('a');
+  var ctx = c.getContext('2d');
+  ctx.clearRect(0, 0, c.width, c.height);
+  ctx.beginPath();
+
+}
+
+  //download the drawing 
+  function saveArt(){
+  window.open = document.getElementById("a").toDataURL();
+  }
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
