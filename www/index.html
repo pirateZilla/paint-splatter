@@ -3,6 +3,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <section>
@@ -25,11 +26,11 @@
                 </div>
                 <div id="otherTools">
                     <p>Tools
-                    <button class="button" id="draw" onclick="drawTool()">draw</button>
-                    <button class="button" id="rectangle" onclick="rectangleTool()">rectangle</button>
-                    <button class="button" id="circle" onclick="circleTool()">circle</button>
-                    <button class="button" id="eraser" onclick="changeColour('white')">eraser</button>
-                    <button class="button" id="clear" onclick="clearCanvas()">clear</button></p>
+                    <button class="button tool-btn" id="draw" onclick="drawTool()"><i class="fa fa-paint-brush"></i> draw</button>
+                    <button class="button tool-btn" id="rectangle" onclick="rectangleTool()"><i class="fa fa-square"></i> rectangle</button>
+                    <button class="button tool-btn" id="circle" onclick="circleTool()"><i class="fa fa-circle"></i> circle</button>
+                    <button class="button tool-btn" id="eraser" onclick="changeColour('white')"><i class="fa fa-eraser"></i> eraser</button>
+                    <button class="button tool-btn" id="clear" onclick="clearCanvas()"><i class="fa fa-times"></i> clear</button></p>
                 </div>
             </div>
 
