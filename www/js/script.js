@@ -3,38 +3,11 @@ var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 context.lineWidth = 5;
 var mouseDown = false;
-//From Here
-var mousePos = { x:0, y:0 };
-var lastPos = mousePos;
-
-canvas.addEventListener("touchstart", function (e) {
-  mousePos = getTouchPos(canvas, e);
-  var touch = e.touches[0];
-  var mouseEvent = new MouseEvent("mousedown", {
-    clientX: touch.clientX,
-    clientY: touch.clientY
-  });
-  canvas.dispatchEvent(mouseEvent);
-}, false);
-canvas.addEventListener("touchend", function (e) {
-  var mouseEvent = new MouseEvent("mouseup", {});
-  canvas.dispatchEvent(mouseEvent);
-}, false);
-canvas.addEventListener("touchmove", function (e) {
-  var touch = e.touches[0];
-  var mouseEvent = new MouseEvent("mousemove", {
-    clientX: touch.clientX,
-    clientY: touch.clientY
-  });
-  canvas.dispatchEvent(mouseEvent);
-}, false);
-
-// to here
 
 canvas.addEventListener('mousedown', function()
 {
   mouseDown = true;
-  //canvas.style.cursor="crosshair";
+  canvas.style.cursor="crosshair";
   context.beginPath();
   context.moveTo(xPos, yPos);
   canvas.addEventListener('mousemove', drawTool);
@@ -92,12 +65,48 @@ function rectangleTool(){
   context.stroke();
 	  }
 
-
-
-
-
-
-// and here
+// For mobile Touch interfaces
+    var mousePos = { x:0, y:0 };
+    var lastPos = mousePos;
+    
+    canvas.addEventListener("touchstart", function (e) {
+      mousePos = getTouchPos(canvas, e);
+      var touch = e.touches[0];
+      var mouseEvent = new MouseEvent("mousedown", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+      });
+      canvas.dispatchEvent(mouseEvent);
+    }, false);
+    canvas.addEventListener("touchend", function (e) {
+      var mouseEvent = new MouseEvent("mouseup", {});
+      canvas.dispatchEvent(mouseEvent);
+    }, false);
+    canvas.addEventListener("touchmove", function (e) {
+      var touch = e.touches[0];
+      var mouseEvent = new MouseEvent("mousemove", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+      });
+      canvas.dispatchEvent(mouseEvent);
+    }, false);
+    
+// Prevents scrolling when touching the canvas
+document.body.addEventListener("touchstart", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener("touchend", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener("touchmove", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
 
     function getTouchPos(canvasDom, touchEvent) {
       var rect = canvasDom.getBoundingClientRect();
@@ -107,4 +116,4 @@ function rectangleTool(){
       };
     }
 
-// to here
+    

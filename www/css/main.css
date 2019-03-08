@@ -19,6 +19,15 @@ canvas {
   border: 1px solid black;
 }
 
+.tool-btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 
 
 .black {
@@ -122,11 +131,3 @@ canvas {
 }
 
 
-.tool-btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: white;
-  padding: 12px 16px;
-  font-size: 16px;
-  cursor: pointer;
-}
