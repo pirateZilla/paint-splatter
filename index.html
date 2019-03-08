@@ -1,100 +1,40 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-<head>
-  <title> my PaintAPP</title>
-  <link rel="stylesheet" type="text/css" href="main.css">
-</head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+    </head>
+    <body>
+        <section>
+            <div id="tools">
+                <div id="colours">
+                    <p>Select Colour:</p>
+                    <button id="black" onclick="changeColour('black')">black</button>
+                    <button id="red" onclick="changeColour('red')">red</button>
+                    <button id="green" onclick="changeColour('green')">green</button>
+                    <button id="blue" onclick="changeColour('blue')">blue</button>
+                    <button id="white" onclick="changeColour('white')">white</button>
+                </div>
+                <div id="brushSizes">
+                    <p>Select Brush Size:</p>
+                    <button id="size1" onclick="changeBrushSize('5')">tiny</button>
+                    <button id="size2" onclick="changeBrushSize('10')">small</button>
+                    <button id="size3" onclick="changeBrushSize('20')">medium</button>
+                    <button id="size4" onclick="changeBrushSize('50')">large</button>
+                    <button id="size5" onclick="changeBrushSize('100')">huge</button>
+                </div>
+                <div id="otherTools">
+                    <p>Select Brush Tool:</p>
+                    <button id="draw" onclick="drawTool()">draw</button>
+                    <button id="rectangle" onclick="rectangleTool()">rectangle</button>
+                    <button id="circle" onclick="circleTool()">circle</button>
+                    <button id="eraser" onclick="changeColour('white')">eraser</button>
+                    <button id="clear" onclick="clearCanvas()">clear</button>
+                </div>
+            </div>
 
-<body>
-
-<canvas id="a" width="800" height="500"></canvas>
-
-<div>
-  <button id="button_clear" onclick="clearCanvas()" > Clear !</button>
-</div>
-<div>
- <button onclick="window.location.reload()">reset </button> 
-</div>
-   <select  id="dcol" name="Colour">
-              <option value="black" selected="selected">Black</option>
-              <option value="red">Red</option>
-              <option value="green"> Green</option>
-              <option value="blue">Blue</option>
-              <option value="white">** ERASER **</option>
-            </select>
-</div>
-<div>
-  <button id="drawing" onclick="drawRectangle()"> save art </button>
-</div>
-<script type="text/javascript">
-  //canvas variables 
-  var md = false;
-  var size = prompt('enter your brush size')
-  var canvas = document.getElementById('a');
-  canvas.addEventListener('mousedown', down);
-  canvas.addEventListener('mouseup', toggledraw);
-  canvas.addEventListener('mousemove', 
-  function(evt){
-    var mousePos = getMousePos(canvas, evt);
-    var posx = mousePos.x;
-    var posy = mousePos.y;
-    draw(canvas, posx, posy);
-
-  });
-
-
-  function down(){
-    md = true;
-  }
-  function toggledraw(){
-
-    md = false;
-    canvas.style.cursor="crosshair"; //changes the pointer 
-    
-  }
-  function getMousePos(canvas, evt){
-    var rect = canvas.getBoundingClientRect();
-    return{
-      x:evt.clientX - rect.left,
-      y:evt.clientY - rect.top
-    };
-  }
-  function draw(canvas, posx, posy){
-    var context = canvas.getContext('2d');
-    if(md){
-
-      canvas.style.cursor="crosshair"; //changes the pointer 
-      context.fillRect(posx, posy, size, size)
-      //takes values from drop down to change the colour
-      context.fillStyle=dcol.value;
-    }
-  }
-
-
-  //the clear button 
-  function clearCanvas(){
-
-  var c = document.getElementById('a');
-  var ctx = c.getContext('2d');
-  ctx.clearRect(0, 0, c.width, c.height);
-  ctx.beginPath();
-
-}
-
-  //download the drawing 
-  function saveArt(){
-  window.open = document.getElementById("a").toDataURL();
-  }
-
-
-
-
-</script>
-
-
-
-
-
-
-</body>
+            <canvas id="canvas" width="800" height="500"></canvas>
+        </section>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
 </html>
