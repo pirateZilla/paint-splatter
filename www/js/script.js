@@ -20,6 +20,11 @@ canvas.addEventListener('mouseup', function()
   mouseDown = false; 
 });
 
+canvas.addEventListener('mouseout', function() 
+{ 
+  mouseDown = false; 
+});
+
 function drawTool(e)
 {
   xPos = e.clientX - canvas.offsetLeft;
