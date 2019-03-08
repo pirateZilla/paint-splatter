@@ -16,8 +16,11 @@ canvas {
   display: inline-block;
   margin: 4px 4px;
   cursor: pointer;
-  border: 1px solid black;
+  border: 2px solid black;
   width: 120px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 12px;
 }
 
 .tool-btn {
@@ -27,109 +30,236 @@ canvas {
   padding: 12px 16px;
   font-size: 16px;
   cursor: pointer;
-  border: 1px solid black;
+  border: 2px solid black;
+}
+
+.tool-btn:hover {
+  background-color:white;
+  color:dodgerblue;
+  border: 2px solid dodgerblue;
+
 }
 
 
 
 .black {
   background-color: black;
-  color: white;
+  color: black;
+}
+
+.black:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
 }
 
 .white {
   background-color: white;
-  color: black;
+  color: white;
+}
+
+.white:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
 }
 
 .gray {
   background-color: gray;
-  color: white;
+  color: gray;
+}
+
+.gray:hover {
+  background-color: white;
+  color: gray;
+  border: 2px solid gray;
 }
 
 .darkgray {
   background-color: darkgray;
-  color: white;
+  color: darkgray;
+}
+
+.darkgray:hover {
+  background-color: white;
+  color: darkgray;
+  border: 2px solid darkgray;
 }
 
 .darkred {
   background-color: darkred;
-  color: white;
+  color: darkred;
+}
+
+.darkred:hover {
+  background-color: white;
+  color: darkred;
+  border: 2px solid darkred;
 }
 
 .brown {
   background-color: brown;
-  color: white;
+  color: brown;
+}
+
+.brown:hover {
+  background-color: white;
+  color: brown;
+  border: 2px solid brown;
 }
 
 .red {
   background-color: red;
-  color: white;
+  color: red;
+}
+
+.red:hover {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
 }
 
 .violet {
   background-color: violet;
-  color: white;
+  color: violet;
+}
+
+.violet:hover {
+  background-color: white;
+  color: violet;
+  border: 2px solid violet;
 }
 
 .orange {
   background-color: orange;
-  color: white;
+  color: orange;
+}
+
+.orange:hover {
+  background-color: white;
+  color: orange;
+  border: 2px solid orange;
 }
 
 .gold {
   background-color: gold;
-  color: white;
+  color: gold;
+}
+
+.gold:hover {
+  background-color: white;
+  color: gold;
+  border: 2px solid gold;
 }
 
 .yellow {
   background-color: yellow;
-  color: white;
+  color: yellow;
+}
+
+.yellow:hover {
+  background-color: white;
+  color: gold;
+  border: 2px solid yellow;
 }
 
 .lightyellow {
   background-color: lightyellow;
-  color: white;
+  color: lightyellow;
+}
+
+.lightyellow:hover {
+  background-color: white;
+  color: gold;
+  border: 2px solid lightyellow;
 }
 
 .green {
   background-color: green;
-  color: white;
+  color: green;
+}
+
+.green:hover {
+  background-color: white;
+  color: green;
+  border: 2px solid green;
 }
 
 .lime {
   background-color: lime;
-  color: white;
+  color: lime;
+}
+
+.lime:hover {
+  background-color: white;
+  color: lime;
+  border: 2px solid lime;
 }
 
 .turquoise {
   background-color: turquoise;
-  color: white;
+  color: turquoise;
+}
+
+.turquoise:hover {
+  background-color: white;
+  color: turquoise;
+  border: 2px solid turquoise;
 }
 
 .aquamarine {
   background-color: aquamarine;
-  color: white;
+  color: aquamarine;
+}
+
+.aquamarine:hover {
+  background-color: white;
+  color: turquoise;
+  border: 2px solid aquamarine;
 }
 
 .blue {
   background-color: blue;
-  color: white;
+  color: blue;
+}
+
+.blue:hover {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
 }
 
 .cornflowerblue {
   background-color: cornflowerblue;
-  color: white;
+  color: cornflowerblue;
+}
+
+.cornflowerblue:hover {
+  background-color: white;
+  color: cornflowerblue;
+  border: 2px solid cornflowerblue;
 }
 
 .purple {
   background-color: purple;
-  color: white;
+  color: purple;
+}
+
+.purple:hover {
+  background-color: white;
+  color: purple;
+  border: 2px solid purple;
 }
 
 .lavender {
   background-color: lavender;
-  color: white;
+  color: lavender;
+}
+
+.lavender:hover {
+  background-color: white;
+  color: purple;
+  border: 2px solid lavender;
 }
 
 
