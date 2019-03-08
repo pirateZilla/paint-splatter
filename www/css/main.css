@@ -2,6 +2,12 @@ canvas {
   border: 1px solid black;
 }
 
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  padding: 10px;
+}
+
 .button {
   border: none;
   padding: 15px 15px;
@@ -10,10 +16,38 @@ canvas {
   display: inline-block;
   /*margin: 4px 4px;*/
   cursor: pointer;
+  border: 1px solid black;
 }
+
+
 
 .black {
   background-color: black;
+  color: white;
+}
+
+.white {
+  background-color: white;
+  color: black;
+}
+
+.gray {
+  background-color: gray;
+  color: white;
+}
+
+.darkgray {
+  background-color: darkgray;
+  color: white;
+}
+
+.darkred {
+  background-color: darkred;
+  color: white;
+}
+
+.brown {
+  background-color: brown;
   color: white;
 }
 
@@ -22,8 +56,48 @@ canvas {
   color: white;
 }
 
+.violet {
+  background-color: violet;
+  color: white;
+}
+
+.orange {
+  background-color: orange;
+  color: white;
+}
+
+.gold {
+  background-color: gold;
+  color: white;
+}
+
+.yellow {
+  background-color: yellow;
+  color: white;
+}
+
+.lightyellow {
+  background-color: lightyellow;
+  color: white;
+}
+
 .green {
   background-color: green;
+  color: white;
+}
+
+.lime {
+  background-color: lime;
+  color: white;
+}
+
+.turquoise {
+  background-color: turquoise;
+  color: white;
+}
+
+.aquamarine {
+  background-color: aquamarine;
   color: white;
 }
 
@@ -32,11 +106,21 @@ canvas {
   color: white;
 }
 
-.white {
-  background-color: white;
-  color: black;
-  border: 1px solid black; 
+.cornflowerblue {
+  background-color: cornflowerblue;
+  color: white;
 }
+
+.purple {
+  background-color: purple;
+  color: white;
+}
+
+.lavender {
+  background-color: lavender;
+  color: white;
+}
+
 
 .tool-btn {
   background-color: DodgerBlue;
