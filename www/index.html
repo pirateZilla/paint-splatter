@@ -13,8 +13,19 @@
     </head>
     <body>
         <section>
-           <div class="center">                
+           <div class="center"> 
+                <canvas id="canvas" width="656" height="500"></canvas>               
                 <div class="grid-container" id="tools">
+                    <button class="button tool-btn tiny" id="size1" onclick="changeBrushSize('2')"><i class="fa fa-pencil"></i> tiny</button>
+                    <button class="button tool-btn small" id="size2" onclick="changeBrushSize('5')"><i class="fa fa-pencil"></i> small</button>
+                    <button class="button tool-btn medium" id="size3" onclick="changeBrushSize('10')"><i class="fa fa-pencil"></i> medium</button>
+                    <button class="button tool-btn large" id="size4" onclick="changeBrushSize('20')"><i class="fa fa-pencil"></i> large</button>
+                    <button class="button tool-btn huge" id="size5" onclick="changeBrushSize('40')"><i class="fa fa-pencil"></i> huge</button>
+                    <button class="button tool-btn" id="draw" onclick="drawTool()"><i class="fa fa-paint-brush"></i> draw</button>
+                    <button class="button tool-btn" id="rectangle" onclick="rectangleTool()"><i class="fa fa-square"></i> rectangle</button>
+                    <button class="button tool-btn" id="circle" onclick="circleTool()"><i class="fa fa-circle"></i> circle</button>
+                    <button class="button tool-btn" id="eraser" onclick="changeColour('white')"><i class="fa fa-eraser"></i> eraser</button>
+                    <button class="button tool-btn" id="clear" onclick="clearCanvas()"><i class="fa fa-times"></i> clear</button>
                     <button class="button grid-item black" id="black" onclick="changeColour('black')">black</button>
                     <button class="button grid-item darkred" id="darkred" onclick="changeColour('darkred')">dark red</button>
                     <button class="button grid-item orange" id="orange" onclick="changeColour('orange')">orange</button>
@@ -35,18 +46,7 @@
                     <button class="button grid-item lightyellow" id="lightyellow" onclick="changeColour('lightyellow')">light yellow</button>
                     <button class="button grid-item aquamarine" id="aquamarine" onclick="changeColour('aquamarine')">aquamarine</button>
                     <button class="button grid-item lavender" id="lavender" onclick="changeColour('lavender')">lavender</button>
-                    <button class="button tool-btn tiny" id="size1" onclick="changeBrushSize('2')"><i class="fa fa-pencil"></i> tiny</button>
-                    <button class="button tool-btn small" id="size2" onclick="changeBrushSize('5')"><i class="fa fa-pencil"></i> small</button>
-                    <button class="button tool-btn medium" id="size3" onclick="changeBrushSize('10')"><i class="fa fa-pencil"></i> medium</button>
-                    <button class="button tool-btn large" id="size4" onclick="changeBrushSize('20')"><i class="fa fa-pencil"></i> large</button>
-                    <button class="button tool-btn huge" id="size5" onclick="changeBrushSize('40')"><i class="fa fa-pencil"></i> huge</button>
-                    <button class="button tool-btn" id="draw" onclick="drawTool()"><i class="fa fa-paint-brush"></i> draw</button>
-                    <button class="button tool-btn" id="rectangle" onclick="rectangleTool()"><i class="fa fa-square"></i> rectangle</button>
-                    <button class="button tool-btn" id="circle" onclick="circleTool()"><i class="fa fa-circle"></i> circle</button>
-                    <button class="button tool-btn" id="eraser" onclick="changeColour('white')"><i class="fa fa-eraser"></i> eraser</button>
-                    <button class="button tool-btn" id="clear" onclick="clearCanvas()"><i class="fa fa-times"></i> clear</button>
-                </div>
-                <canvas id="canvas" width="656" height="500"></canvas>
+                </div>                
             </div>
         </section>
 
