@@ -2,6 +2,7 @@ var canvas = document.getElementById('canvas');
 
 var context = canvas.getContext('2d');
 context.lineWidth = 5;
+context.lineCap = "round";
 var mouseDown = false;
 
 canvas.addEventListener('mousedown', function()
