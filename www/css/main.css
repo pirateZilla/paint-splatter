@@ -275,4 +275,18 @@ canvas {
   border: 2px solid lavender;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  background-color: midnightblue;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
 
+.footer a {
+  color: white;
+}
