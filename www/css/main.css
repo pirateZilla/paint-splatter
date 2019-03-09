@@ -1,6 +1,19 @@
-canvas {
-  border: 1px solid black;
+html {
+  background-color: lightsteelblue;
 }
+
+canvas {
+  border: 2px solid black;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.center {
+  margin: auto;
+  width: 35%;
+  padding: 10px;
+}
+
 
 .grid-container {
   display: inline-grid;
