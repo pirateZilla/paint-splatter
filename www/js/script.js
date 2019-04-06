@@ -1,6 +1,8 @@
 var canvas = document.getElementById('canvas');
 
 var context = canvas.getContext('2d');
+context.fillStyle = "#ffffff";
+context.fillRect(0, 0, 656, 500);
 context.lineWidth = 5;
 context.lineCap = "round";
 var mouseDown = false;
