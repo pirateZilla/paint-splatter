@@ -5,6 +5,12 @@ context.lineWidth = 5;
 context.lineCap = "round";
 var mouseDown = false;
 
+var button = document.getElementById('btn-download');
+button.addEventListener('click', function (e) {
+    var dataURL = canvas.toDataURL('image/png');
+    button.href = dataURL;
+});
+
 canvas.addEventListener('mousedown', function()
 {
   mouseDown = true;
