@@ -1,24 +1,11 @@
 html {
-  background-color: lightsteelblue;
+  background-color: lightskyblue;
 }
 
 canvas {
   border: 2px solid black;
   border-radius: 12px;
   background-color: white;
-  float:left;
-  padding:20px;
-  
-}
-
-h1 {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-size: 32px;
-  text-align: center;
 }
 
 body {
@@ -28,10 +15,8 @@ body {
 
 .center {
   margin: auto;
-  width: 45%;
+  width: 35%;
   padding: 10px;
-  float:right;
-
 }
 
 
@@ -43,14 +28,14 @@ body {
 
 .button {
   border: none;
-  padding: 12px 12px;
+  padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 4px 4px;
   cursor: pointer;
   border: 2px solid black;
-  width: 100px;
+  width: 120px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   border-radius: 12px;
@@ -64,6 +49,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   border: 2px solid black;
+  font-family: Arial, Helvetica, sans-serif
 }
 
 .tool-btn:hover {
@@ -304,9 +290,14 @@ body {
   background-color: midnightblue;
   color: white;
   text-align: center;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer a {
   color: white;
+}
+
+.splat {
+  text-transform: uppercase;
+  font-weight: bold;
 }
