@@ -6,6 +6,9 @@ canvas {
   border: 2px solid black;
   border-radius: 12px;
   background-color: white;
+  float:left;
+  padding:20px;
+  
 }
 
 h1 {
@@ -25,8 +28,10 @@ body {
 
 .center {
   margin: auto;
-  width: 50%;
+  width: 45%;
   padding: 10px;
+  float:right;
+
 }
 
 
@@ -38,14 +43,14 @@ body {
 
 .button {
   border: none;
-  padding: 15px 15px;
+  padding: 12px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   margin: 4px 4px;
   cursor: pointer;
   border: 2px solid black;
-  width: 120px;
+  width: 100px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   border-radius: 12px;
