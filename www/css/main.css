@@ -286,15 +286,14 @@ body {
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  position: relative;
+  width: 80%;
   margin: auto;
   background-color: midnightblue;
   color: white;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 6px 6px;
 }
 
 .footer a {
