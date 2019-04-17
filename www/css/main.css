@@ -312,6 +312,7 @@ input[type="file"] {
 }
 
 .custom-file-upload {
+  min-width: 100px;
   border: 1px solid dodgerblue;
   display: inline-block;
   padding: 6px 12px;
@@ -334,6 +335,7 @@ input[type="file"] {
 }
 
 #btn-download  {
+  min-width: 100px;
   border: 1px solid dodgerblue;
   display: inline-block;
   padding: 6px 12px;
