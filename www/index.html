@@ -19,7 +19,6 @@
 
     <section>
         <div class="center">
-            <input type='file' id="fileUpload" />
             <canvas id="canvas" width="656" height="500"></canvas>
             <div class="grid-container" id="tools">
                 <button class="button tool-btn tiny" id="size1" onclick="changeBrushSize('2')"><i
@@ -74,7 +73,10 @@
     </section>
 
     <div class="footer">
-        <p>Welcome to <span class="splat">Paint Splatter</span>. To download your creation please click <a href="#"  id="btn-download" download="splatterfile.png">Here</a>. For information check out our <a href="https://gitlab.computing.dcu.ie/moored39/paint-splatter">GitLab repo.</a></p>
+        <p>Welcome to <span class="splat">Paint Splatter</span>. <a href="#"  id="btn-download" download="splatterfile.png">Download</a><label class="custom-file-upload">
+            <input type="file"/>
+            Custom Upload
+        </label><input type='file' id="fileUpload" />. For information check out our <a href="https://gitlab.computing.dcu.ie/moored39/paint-splatter">GitLab repo.</a></p>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
